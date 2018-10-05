@@ -8,6 +8,6 @@ var f = function(Array)
             if(Array[i] %2 === 0)even++;
             else noteven++;
     }
-    return [pos,neg,zero];
+    return [even,noteven,zero];
 }
 console.log(f([1,2,3,-2,-3,0,0,0,0,0,-8,null,true,false,[1],"",""]));
