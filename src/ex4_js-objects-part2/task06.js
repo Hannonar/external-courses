@@ -10,4 +10,4 @@ var f = function firstCharsToUpper(str)
     return res;
 }
 
-console.log(+f("   sdgs   abd dsgd fsdsdfg asd fgd  h"));
+console.log(f("   sdgs   abd dsgd fsdsdfg asd fgd  h"));
