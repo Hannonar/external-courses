@@ -1,18 +1,13 @@
 var f = function firstCharsToUpper(str)
 {
     var res = "";
-    var last=-1;
-    var current = str.indexOf(" ");
-    do
+    if(str[0]!=" ") res+=str[0].toUpperCase();
+    for(var i=1;i<str.length;i++)
     {
-        res += str.substring(last+1,current);
-        res += str.substring(current,current+2).toUpperCase();
-        last = current;
-        current = str.indexOf(" ", last+1); 
+        if(str[i-1] === " ") res+=str[i].toUpperCase();
+        else res+= str[i];
     }
-    while(last < current);
-    res += str.substring(last,str.length - 1);
     return res;
 }
 
-console.log(f("   abd dsgd fsdsdfg asd fgd  "));
+console.log(+f("   sdgs   abd dsgd fsdsdfg asd fgd  h"));
