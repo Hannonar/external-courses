@@ -1,4 +1,4 @@
-var f = function(str,num)
+var f = function cut(str,num)
 {
     if(str.length>num)
     {
