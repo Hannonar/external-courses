@@ -1,32 +1,62 @@
-var Calculator = {};
-Calculator.lastResult = 0,
-Calculator.add= function f(a)
+function f(a)
+{
+    result = 0;
+    switch(a)
     {
-        this.lastResult +=a;
-        return this.f;
-    };
-Calculator.subtract= function f(a)
-    {
-        lastResult -=a;
-        return f;
+        case 0:
+        {
+            return function f1 (b)
+            {
+                this.result +=b;
+                return this.f1;
+            }
+        }
+        break;
+        case 1:
+        {
+            return function f1 (b)
+            {
+                this.result -=b;
+                return this.f1;
+            }
+        }
+        break;
+        case 2:
+        {
+            return function f1 (b)
+            {
+                this.result /=b;
+                return this.f1;
+            }
+        }
+        break;
+        case 3:
+        {
+            return function f1 (b)
+            {
+                this.result *=b;
+                return this.f1;
+            }
+        }
+        break;
+        case 4:
+        {
+            return function f1 (b)
+            {
+                return this.result;
+            }
+        }
+        default: return undefined;
     }
-Calculator.divide= function f(a)
-    {
-        lastResult /=a;
-        return f;
-    },
-Calculator.multiple= function f(a)
-    {
-        lastResult *=a;
-        return f;
-    };
-Calculator.getResult= function()
-    {
-        return this.lastResult;
-    };
-Calculator.reset = function()
-    {
-        this.lastResult = 0;
-    }
-Calculator.add(1)(2);
+}
+var Calculator = 
+{
+    add:f(0),
+    substr:f(1),
+    divide:f(2),
+    multiple:f(3),
+    getResult:f(4)
+}
+
+Calculator.add(1);
 console.log(Calculator.getResult());
