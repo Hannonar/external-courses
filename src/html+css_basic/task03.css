@@ -1,0 +1,42 @@
+div.a
+{
+    border: 10px;
+    border-style: solid;
+    border-color: tomato;
+    height: 100px;
+    width: 100%;
+}
+
+div.b
+{
+    outline-color: rgb(0, 0, 0);
+    outline: 5px;
+    outline-style: solid;
+    width: 100%;
+    height: 50px;
+}
+
+div.c
+{
+    background: white;
+    padding: 10;
+    box-shadow: 0 0 0 5px green;
+    width: 100%;
+    height: 100px;
+}
+
+div.d
+{
+    border-image: url(https://million-wallpapers.ru/wallpapers/4/18/11117599216546778944.jpg) 10;
+    border-style: solid;
+    height: 100px;
+    width: 100%;
+}
+
+div.e
+{
+    border-color: gold;
+    border-width: 10px;
+    border-radius: 100px;
+    border-style: solid;
+}
