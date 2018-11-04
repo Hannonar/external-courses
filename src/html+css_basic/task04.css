@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css?family=Yanone+Kaffeesatz');
+*
+{
+    font-size: 25px;
+}
+.a
+{
+    background: url(https://million-wallpapers.ru/wallpapers/4/18/11117599216546778944.jpg);
+    width: 50%;
+    height: auto;
+    font-family: 'Yanone Kaffeesatz', sans-serif;
+}
+.b
+{
+    background-color: #123456;
+    width: 300px;
+    height: 100px;
+    font-family: 'Times New Roman', Times, serif
+}
+.c
+{
+    background-color: rgb(100, 200, 0);
+    width: 3in;
+    height: 2in;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif
+}
+#d
+{
+    background-color: rgba(1, 150, 150, .5);
+    width: max-content;
+    height: max-content;
+    font-family: 'Courier New', Courier, monospace
+}
