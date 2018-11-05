@@ -14,13 +14,13 @@ div::before, div::after
     width: 100%;
     height: 100%;
 }
-div::before
+div::after
 {
     top: 5px;
     left: 5px;
     background-color: #90CDAF;
 }
-div::after
+div::before
 {
     top: 10px;
     left: 10px;
