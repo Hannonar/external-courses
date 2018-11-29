@@ -1,46 +1,62 @@
-var  init = function(obj)
+function f(a)
 {
-    var result = 0;
-    obj.add = function f1(b)
+    result = 0;
+    switch(a)
     {
-        if(b!= undefined) result +=b;
-        return f1;
-    }
-    obj.subtract = function f1(b)
-    {
-        if(b!= undefined) result -=b;
-         return f1;
-    }
-    obj.divide = function f1(b)
-    {
-        if(b!= undefined) result /=b;
-        return f1;
-    }
-    obj.multiply = function f1(b)
-    {
-        if(b!= undefined) result *=b;
-        return f1;
-    }
-    obj.getResult = function f1()
-    {
-        return result;
-    }
-    obj.reset = function f1()
-    {
-        result = 0;
-        return "Результат последней операции обнулен";
+        case 0:
+        {
+            return function f1 (b)
+            {
+                this.result +=b;
+                return this.f1;
+            }
+        }
+        break;
+        case 1:
+        {
+            return function f1 (b)
+            {
+                this.result -=b;
+                return this.f1;
+            }
+        }
+        break;
+        case 2:
+        {
+            return function f1 (b)
+            {
+                this.result /=b;
+                return this.f1;
+            }
+        }
+        break;
+        case 3:
+        {
+            return function f1 (b)
+            {
+                this.result *=b;
+                return this.f1;
+            }
+        }
+        break;
+        case 4:
+        {
+            return function f1 (b)
+            {
+                return this.result;
+            }
+        }
+        default: return undefined;
     }
 }
-var Calculator = {};
-init(Calculator);
-console.log(Calculator.getResult());
-Calculator.add(1)();
-console.log(Calculator.getResult());
-Calculator.subtract(3)()()(2);
-console.log(Calculator.getResult());
-Calculator.divide(2)(1)();
-console.log(Calculator.getResult());
-Calculator.multiply(100)(.1);
-console.log(Calculator.getResult());
-Calculator.reset();
+var Calculator = 
+{
+    add:f(0),
+    substr:f(1),
+    divide:f(2),
+    multiple:f(3),
+    getResult:f(4)
+}
+
+Calculator.add(1);
 console.log(Calculator.getResult());
