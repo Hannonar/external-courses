@@ -1,0 +1,54 @@
+@font-face 
+{
+    font-family: 'Proxima Nova Regular';
+    src: url('ProximaNova-Regular.eot');
+    src: url('ProximaNova-Regular.eot?#iefix') format('embedded-opentype'),
+    url('ProximaNova-Regular.woff') format('woff'),
+    url('ProximaNova-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+.sidebar
+{
+    width: 200px;
+    background-color: #1f2637;
+    height: 780px;
+}
+.sidebar-divider
+{
+    background-color: #19202e;
+    height: 4px;
+    border: 0;
+    box-shadow: 0px -1px 0px 0px #141824,
+                0px 1px 0px 0px #282f41;
+    margin-bottom: 1px;
+}
+.sidebar-list
+{
+    width: 100%;
+    list-style-type: none;
+    padding-left: 0px;
+    margin-top: 0px;
+    padding-bottom: 13px;
+}
+.sidebar-list_item
+{
+    display: block;
+    width: 100%;
+    list-style: none;
+    height: 39px;
+    font-size: 13px;
+    border: 0;
+}
+.sidebar-list_item:hover
+{
+    background-color: #15a4fa;
+}
+.sidebar-list_item_icon
+{
+
+}
+.sidebar-list_item_text
+{
+    
+}
