@@ -40,15 +40,19 @@ Calculator.prototype.setState = function(b)
 Calculator.prototype.fetchData = function(callback)
 {
     console.log("Fetching data");
-    setTimeout(function(){console.log("Fetching completed");},1500);
-    callback();
+    setTimeout(function()
+    {
+        console.log("Fetching completed");
+        callback.bind(this);
+    },1500);
+    
 }
 Calculator.prototype.fetchingCompleted = function()
 {
-    this.setState(500);
+    setState(500);
 }
 
 var calc = new Calculator;
-//console.log(calc.add(2).add(3).divide(5).multiply(100).getResult());
+console.log(calc.add(2).add(3).divide(5).multiply(100).getResult());
 calc.fetchData(calc.fetchingCompleted);
 console.log(calc.getResult());
