@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&subset=cyrillic');
+@media (max-width:768px)
+{
+    div
+    {
+        width: 200px;
+        height: 100px;
+        background-color: red;
+        font-family: "Open Sans";
+    }
+}
+@media (min-width:768px)
+{
+    .content
+    {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+    }
+    .content-caption
+    {
+        background: url("iback.png") no-repeat;
+    }
+    .content-about
+    {
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: 2em;
+    }
+    .content-about>#c1
+    {
+        grid-column: 2 / span 1;
+    }
+    .content-about>#c2
+    {
+        grid-column: 3 / span 1;
+    }
+    .conent-about>div
+    {
+        background-color: aqua;
+    }
+}
+span
+{
+    font-family: "Open Sans";
+    font-size: 13px;
+}
+h1
+{
+    font-family: "Open Sans";
+}
+h3
+{
+    font-family: "Open Sans";
+}
