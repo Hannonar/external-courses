@@ -1,3 +1,5 @@
+CalcProt = Object.create(Object);
+Calculator = Object.create(CalcProt);
 Calculator = function()
 {
     result = 0;
@@ -40,19 +42,15 @@ Calculator.prototype.setState = function(b)
 Calculator.prototype.fetchData = function(callback)
 {
     console.log("Fetching data");
-    setTimeout(function()
-    {
-        console.log("Fetching completed");
-        callback.bind(this);
-    },1500);
+    setTimeout(callback.bind(this),1500,500);
     
 }
 Calculator.prototype.fetchingCompleted = function()
 {
-    setState(500);
+    this.setState(500);
+    console.log(this.getResult());
 }
 
 var calc = new Calculator;
 console.log(calc.add(2).add(3).divide(5).multiply(100).getResult());
 calc.fetchData(calc.fetchingCompleted);
-console.log(calc.getResult());
